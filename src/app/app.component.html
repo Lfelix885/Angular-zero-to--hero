@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<!-- <app-nav></app-nav> -->
+
+<span *ngIf="cepInfo$ | async as cepInfo; else loading">
+  O nome da minha rua é {{ cepInfo.logradouro }}
+</span>
+
+<ng-template #loading>carregando...</ng-template>
+
+<app-footer></app-footer>
