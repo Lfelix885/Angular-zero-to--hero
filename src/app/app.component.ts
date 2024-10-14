@@ -13,14 +13,4 @@ interface Cep {
   templateUrl: "./app.component.html",
   styles: [],
 })
-export class AppComponent implements OnInit {
-  constructor(private http: HttpClient) {}
-
-  cepInfo$: Observable<Cep>;
-
-  ngOnInit(): void {
-    this.cepInfo$ = this.http.get<Cep>(
-      "https://viacep.com.br/ws/07190023/json/"
-    );
-  }
-}
+export class AppComponent {}
